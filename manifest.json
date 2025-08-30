@@ -1,6 +1,6 @@
 {
   "name": "Simple Translator",
-  "description": "This extension allows the user to translate text by selecting it, via de chrome translator AI API.",
+  "description": "Fast and simple text translation on selection, via chrome translator AI API.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
