@@ -47,22 +47,33 @@ const onSelect = async () => {
   const from = storage.simpleTranslatorFrom
   const to = storage.simpleTranslatorTo
 
-  // Translate text
-  document.body.style.cursor = "wait"
-  const translator = await Translator.create({
-    sourceLanguage: from,
-    targetLanguage: to,
-  });
+  try {
+    // Translate text
+    document.body.style.cursor = "wait"
+    const translator = await Translator.create({
+      sourceLanguage: from,
+      targetLanguage: to,
+    });
 
-  const translation = await translator.translate(selection);
-  document.body.style.cursor = "auto"
+    const translation = await translator.translate(selection);
 
-  // Display translation
-  popup.textContent = translation;
-  popup.style.display = "block";
+    // Display translation
+    popup.textContent = translation;
+    popup.style.display = "block";
 
-  // Add event listener to remove popup
-  window.addEventListener("click", onClick)
+    // Add event listener to remove popup
+    window.addEventListener("click", onClick)
+  } catch {
+    // Display error
+    popup.textContent = "Unsupported language pair. Sorry :(";
+    popup.style.display = "block";
+
+    // Add event listener to remove popup
+    window.addEventListener("click", onClick)
+  }
+  finally {
+    document.body.style.cursor = "auto"
+  }
 }
 
 // Add event listener to run the translation on every selection of text
