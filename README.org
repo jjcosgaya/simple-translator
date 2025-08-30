@@ -8,3 +8,14 @@
 
 * Demo
   [[file:examples/demo.gif]]
+
+* Installation
+  I am hoping to get it published in the google store.
+
+  In the meantime, it can be installed by following these steps:
+  1. Download or clone the repository. In Linux:
+     #+begin_src bash
+     git clone https://github.com/jjcosgaya/simple-translator
+     #+end_src
+  2. Navigate from any chromium based web browser to ~chrome://extensions/~
+  3. Click on ~Load unpacked~ and select the directory where the extension is located.
