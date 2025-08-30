@@ -1,0 +1,10 @@
+* Simple Translator
+  I made this simple extension to quickly translate texts on the web by selecting them. This is useful for language learning, among other things.
+  I wanted something simple, quick, and as less distracting and annoying as possible.
+
+  Once you've selected the /from/ and /to/ languages, simply select the text you want to translate. The translation will appear in a box that follows the mouse, so you can move it around in case it's possition bothers you.
+
+  Once you don't want to see the translation any more, simply click on the screen and the box will go away.
+
+* Demo
+  [[file:examples/demo.gif]]
