@@ -32,12 +32,18 @@ const onSelect = async () => {
   // Event listener cleanup
   window.removeEventListener("mouseup", onSelect)
 
+  // Check if the extension is activated
+  const storage = await chrome.storage.local.get()
+  const active = storage.simpleTranslatorActive
+  if (!active) {
+    return
+  }
+
   // Get selection
   const selection = window.getSelection().toString();
   if (selection === "") return;
 
   // Get languages
-  const storage = await chrome.storage.local.get()
   const from = storage.simpleTranslatorFrom
   const to = storage.simpleTranslatorTo
 
