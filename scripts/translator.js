@@ -23,7 +23,7 @@ document.addEventListener("mousemove", e => {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 //  EVENT HANDLERS
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-const onClick = () => {
+const onClick = async () => {
   window.removeEventListener("click", onClick)
   popup.style.display = "none";
 }
@@ -36,11 +36,16 @@ const onSelect = async () => {
   const selection = window.getSelection().toString();
   if (selection === "") return;
 
+  // Get languages
+  const storage = await chrome.storage.local.get()
+  const from = storage.simpleTranslatorFrom
+  const to = storage.simpleTranslatorTo
+
   // Translate text
   document.body.style.cursor = "wait"
   const translator = await Translator.create({
-    sourceLanguage: 'fi',
-    targetLanguage: 'es',
+    sourceLanguage: from,
+    targetLanguage: to,
   });
 
   const translation = await translator.translate(selection);

@@ -3,6 +3,9 @@
   "description": "This extension allows the user to translate text by selecting it, via de chrome translator AI API.",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "hello.html",
     "default_icon": "icon.png"
