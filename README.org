@@ -17,5 +17,5 @@
      #+begin_src bash
      git clone https://github.com/jjcosgaya/simple-translator
      #+end_src
-  2. Navigate from any chromium based web browser to ~chrome://extensions/~
+  2. Navigate in any chromium based web browser to ~chrome://extensions/~
   3. Click on ~Load unpacked~ and select the directory where the extension is located.
