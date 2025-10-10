@@ -19,3 +19,6 @@
      #+end_src
   2. Navigate in any chromium based web browser to ~chrome://extensions/~
   3. Click on ~Load unpacked~ and select the directory where the extension is located.
+
+** Note
+   For the extension to work, the language translation API must be enabled in ~chrome://flags~
