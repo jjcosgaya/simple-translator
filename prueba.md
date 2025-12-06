@@ -10,10 +10,10 @@ Hypothesis Function
 
 The perceptron uses a step function as its activation:
 ```math
-g(z) = \begin{cases}
+$$g(z) = \begin{cases}
 1 & \text{if } z \ge 0 \\
 0 & \text{if } z < 0
-\end{cases}
+\end{cases}$$
 ```
 
 
